@@ -1,0 +1,38 @@
+{% import 'macros.html' as macros %}
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Самые высокие здания и сооружения</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <ul id="all-refs">
+      <li><a href="#buildings">Список зданий</a></li>
+      <li><a href="#type_buildings">Типы зданий</a></li>
+      <li><a href="#countries">Страны</a></li>
+      <li><a href="#years">Год</a></li>
+      <li><a href="#buildings-by-period">Список зданий в рамках периода</a></li>
+    </ul>
+
+    <h3 id="buildings">Список зданий</h3>
+    {{ macros.render_table(buildings_head, buildings_body) }}
+    <a href="#all-refs">Назад</a></li>
+    
+    <h3 id="type_buildings">Типы зданий</h3>
+    {{ macros.render_table(type_buildings_head, type_buildings_body) }}
+    <a href="#all-refs">Назад</a></li>
+    
+    <h3 id="countries">Страны</h3>
+    {{ macros.render_table(countries_head, countries_body) }}
+    <a href="#all-refs">Назад</a></li>
+    
+    <h3 id="years">Год</h3>
+    {{ macros.render_table(years_head, years_body) }}
+    <a href="#all-refs">Назад</a></li>
+    
+    <h3 id="buildings-by-period">Список зданий в рамках периода</h3>
+    {{ macros.render_table(buildings_by_period_head, buildings_by_period_body) }}
+    <a href="#all-refs">Назад</a></li>
+  </body>
+</html>   

@@ -1,0 +1,24 @@
+{% macro render_table(head_data, body_data) %}
+  <table class="table">
+    <!-- формируем заголовок таблицы (имена столбцов) -->
+    <thead> 
+      <tr> 
+        <!-- выводим имя каждого столбца -->
+          {% for item in head_data %}
+            <th> {{ item }} </th>
+          {% endfor %} 
+        </tr>
+    </thead>
+    <tbody>
+    <!-- для всех строк таблицы -->
+      {% for row in body_data %}       
+        <tr> 
+        <!-- выводим значение каждого столбца -->
+          {% for item in row %}
+            <td> {{ item }} </td>
+          {% endfor %} 
+        </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+{% endmacro %}
